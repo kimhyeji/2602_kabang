@@ -5,13 +5,13 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
-  <!-- 폰트어썸 불러오기 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<!-- 폰트어썸 불러오기 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-	<header class="con-min-width border-green">
-		<div class="con border-blue flex height-100p">
+	<header class="con-min-width">
+		<div class="con flex height-100p">
 			<div class="logo_box img-box flex-as-c">
 				<a href="#">
 					<img src="../imgs/imgi_18_logo_black.svg" alt="logo_img">
@@ -20,7 +20,7 @@
 
 			<div class="flex-grow-1"></div>
 
-			<nav class="menu_box border-red">
+			<nav class="menu_box">
 				<ul class="flex height-100p">
 					<li><a href="#" class="flex flex-ai-c height-100p">은행소개</a></li>
 					<li><a href="#" class="flex flex-ai-c height-100p">IR투자정보</a></li>
@@ -30,15 +30,15 @@
 			</nav>
 
 			<div class="drop_down flex-as-c">
-        <!--
-        # 아이콘 버전
-				<button class="drop_btn">
-          <span>관련사이트</span>
-          <span class="ico"><i class="fa-solid fa-angle-down"></i></span>
-        </button>
-         -->
-        <!-- 이미지 버전 -->
-        <button class="drop_btn">관련사이트</button>
+				<!--
+				# 아이콘 버전
+					<button class="drop_btn">
+						<span>관련사이트</span>
+						<span class="ico"><i class="fa-solid fa-angle-down"></i></span>
+					</button>
+				-->	
+				<!-- 이미지 버전 -->
+				<button class="drop_btn">관련사이트</button>
 			</div>
 		</div>
 	</header>
@@ -107,9 +107,9 @@
 			align-items: center;
 		}
 
-    .flex-as-c {
-      align-self: center;
-    }
+		.flex-as-c {
+			align-self: center;
+		}
 
 		.flex-grow-1 {
 			flex-grow: 1;
@@ -151,47 +151,73 @@
 		}
 
 		/* ------------- 헤더 시작 ------------- */
-    header {
-      height: 80px;
-      font-size: 15px;
-      background-color: #fff;
-    }
+		header {
+			width: 100%;
+			height: 80px;
+			font-size: 15px;
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
+		}
 
-    /* 로고 */
-    header .logo_box > a {
-      width: 116px;
-    }
+		/* 로고 */
+		header .logo_box>a {
+			width: 116px;
+		}
 
-    /* dropdown menu */
-    header .drop_down .drop_btn {
-      background: rgba(244, 244, 244, .8);
-      color: rgb(68, 68, 68);
-      border: 1px solid rgba(229, 229, 229, .8);
-      margin: 0 28px 0 14px;
-      padding: 0 14px 0 18px;
-      height: 40px;
-      border-radius: 40px;
-      font-size: 15px;
-      cursor: pointer;
-    }
+		/* 메뉴 */
+		header .menu_box > ul > li > a {
+			margin: 0 12px;
+			padding: 0 12px;
+			position: relative;
+		}
 
-    /* 아이콘 버전
-    header .drop_down .drop_btn .ico {
-      display: inline-block;
-      margin-left: 5px;
-    }
-    */
+		header .menu_box > ul > li > a::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			display: none;
+		}
 
-    /* 이미지 버전 */
-    header .drop_down .drop_btn::after {
-      content: "";
-      width: 12px;
-      height: 12px;
-      margin-left: 10px;
-      background: url(../imgs/svg_line_arrow_down.svg);
-      background-size: 12px;
-      display: inline-block;
-    }
+		header .menu_box > ul > li:hover > a::after {
+			display: block;
+		}
+
+		/* dropdown menu */
+		header .drop_down .drop_btn {
+			background: rgba(244, 244, 244, .8);
+			color: rgb(68, 68, 68);
+			border: 1px solid rgba(229, 229, 229, .8);
+			margin: 0 28px 0 14px;
+			padding: 0 14px 0 18px;
+			height: 40px;
+			border-radius: 40px;
+			font-size: 15px;
+			cursor: pointer;
+		}
+
+		/* 아이콘 버전
+		header .drop_down .drop_btn .ico {
+			display: inline-block;
+			margin-left: 5px;
+		}
+		*/
+		/* 이미지 버전 */
+		header .drop_down .drop_btn::after {
+			content: "";
+			width: 12px;
+			height: 12px;
+			margin-left: 10px;
+			background: url(../imgs/svg_line_arrow_down.svg);
+			background-size: 12px;
+			display: inline-block;
+		}
 	</style>
 </body>
 
