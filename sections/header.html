@@ -273,6 +273,15 @@
 
 			<div class="drop_down flex-as-c">
 				<button class="drop_btn">관련사이트</button>
+
+				<div class="drop_down_content is-active">
+					<ul>
+						<li><a href=""><span>카카오뱅크 AD</span></a></li>
+						<li><a href=""><span>카카오뱅크 인증서</span></a></li>
+						<li><a href=""><span>금융기술연구소</span></a></li>
+						<li><a href=""><span>기술블로그</span></a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -469,6 +478,10 @@
 		}
 
 		/* dropdown menu */
+		header .drop_down {
+			position: relative;
+		}
+
 		header .drop_down .drop_btn {
 			background: rgba(244, 244, 244, .8);
 			color: rgb(68, 68, 68);
@@ -490,6 +503,38 @@
 			background: url(../imgs/svg_line_arrow_down.svg);
 			background-size: 12px;
 			display: inline-block;
+		}
+
+		header .drop_down .drop_down_content {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 240px;
+			margin-top: 29px;
+			line-height: 48px;
+			border-radius: 6px;
+			background-color: #fff;
+			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		header .drop_down .drop_down_content.is-active {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		header .drop_down .drop_down_content a {
+			font-size: 13px;
+			display: block;
+			padding: 0 24px;
+			box-sizing: border-box;
+		}
+
+		header .drop_down .drop_down_content a:hover {
+			background-color: #f7f7f7;
+			text-decoration: underline;
 		}
 	</style>
 </body>
