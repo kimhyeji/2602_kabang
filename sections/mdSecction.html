@@ -43,7 +43,7 @@
 		<div></div>
 	</section>
 	<div class="md_divider"></div>
-	
+
 	<style>
 		/* 노말라이즈 */
 		body,
@@ -152,7 +152,27 @@
 		}
 
 		/* ------------- 중간 섹션 시작 ------------- */
-        
+        .md_sec {
+			min-height: 500px;
+			border: 10px solid black;
+			display: flex;
+		}
+
+		.md_sec > div:first-child {
+			background-color: pink;
+			width: 55%;
+		}
+
+		.md_sec > div:last-child {
+			background-color: rgb(115, 73, 80);
+			flex-grow: 1;
+		}
+
+		.md_divider {
+			height: 32px;
+			/* background-color: #fafafa; */
+			background-color: #818181;
+		}
 		/* ------------- 중간 섹션 끝 ------------- */
 	</style>
 </body>
