@@ -18,7 +18,7 @@
 html {
   /* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
   /* font-family: "Roboto", "Noto Sans KR", sans-serif; */
-  font-family: 'KoPubDotumbold';
+  font-family: 'KoPubDotumMedium';
 }
 
 /* 노말라이즈 */
@@ -140,6 +140,7 @@ header {
   top: 0;
   left: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
+  z-index: 1000;
 }
 
 /* 로고 */
@@ -332,6 +333,7 @@ header .global_logo:hover > img {
 /* ------------- 메인 배너 시작 ------------- */
 .main_banner {
     position: relative;
+    margin-top: 80px;
 }
 
 .main_banner > .banner_img {
@@ -410,7 +412,7 @@ background-position: -371px -292px;
 
 /* ------------- 중간 섹션 시작 ------------- */
 /* 공통 섹션 시작 */
-    .md_sec {
+.md_sec {
   min-height: 750px;
   display: flex;
 }
@@ -900,6 +902,7 @@ background-position: -371px -292px;
   background-color: #f9f9f9;
   padding-top: 160px;
   padding-bottom: 110px;
+  position: relative;
 }
 
 .itskill_box h3 {
